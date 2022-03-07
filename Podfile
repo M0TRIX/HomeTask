@@ -10,7 +10,6 @@ target 'HomeTask' do
   target 'HomeTaskTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Alamofire', '~> 3.0'
   end
 
 end

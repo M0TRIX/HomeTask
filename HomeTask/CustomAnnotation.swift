@@ -16,7 +16,6 @@ class CustomAnnotation: NSObject, MKAnnotation {
         title: String?,coordinate:CLLocationCoordinate2D) {
         self.title = title
         self.coordinate = coordinate
-
         super.init()
     }
     

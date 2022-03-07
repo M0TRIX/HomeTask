@@ -1,0 +1,16 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "813a3296c9e8684ed9eabc8733ba44a0"
+build_time: [1646692273, 213255000]
+inputs:
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/CustomAnnotation.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Reachability/Network.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Controllers/HomeTaskViewController.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Service/ServiceApi.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/ViewModel/CoordinateViewModel.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Controllers/BaseViewController.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Service/ServiceError.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/MessageUtill.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Response/CheckResponse.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Reachability/Reachability.swift": [9223372036, 854775807]
+  "/Users/webvajhegan/Desktop/test/HomeTask/HomeTask/HomeTask/Model/Coordinate.swift": [9223372036, 854775807]
