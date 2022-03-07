@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Task View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeTaskViewController" customModule="HomeTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rYC-BF-nCu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVT-lm-AB3">
+                                <rect key="frame" x="7" y="621" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W2S-KN-9p5">
+                                <rect key="frame" x="177" y="254" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="directions" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-nI-ihy">
+                                <rect key="frame" x="333" y="626" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2mK-tn-kxm"/>
+                                    <constraint firstAttribute="width" constant="32" id="5fF-K2-XX6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rYC-BF-nCu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0fk-tR-Vg6"/>
+                            <constraint firstItem="rVT-lm-AB3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="8oT-wX-h3O"/>
+                            <constraint firstItem="W2S-KN-9p5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="234" id="Bex-X0-o3u"/>
+                            <constraint firstItem="rYC-BF-nCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bgd-cF-BwV"/>
+                            <constraint firstItem="rYC-BF-nCu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fcx-RL-8Vc"/>
+                            <constraint firstItem="W2S-KN-9p5" firstAttribute="centerX" secondItem="rYC-BF-nCu" secondAttribute="centerX" id="ad5-bV-KaF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nyS-nI-ihy" secondAttribute="trailing" constant="10" id="kZz-fv-NiY"/>
+                            <constraint firstItem="rYC-BF-nCu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mqU-N7-tUi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rVT-lm-AB3" secondAttribute="bottom" constant="25" id="nkw-8u-EOD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nyS-nI-ihy" secondAttribute="bottom" constant="9" id="vGf-3w-qDp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="directions" destination="nyS-nI-ihy" id="UzO-4a-Qru"/>
+                        <outlet property="informationLabel" destination="rVT-lm-AB3" id="6ji-n7-hi6"/>
+                        <outlet property="loading" destination="W2S-KN-9p5" id="apH-o4-skH"/>
+                        <outlet property="mapView" destination="rYC-BF-nCu" id="Wvu-u9-8EX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="directions" width="32" height="32"/>
+    </resources>
 </document>
