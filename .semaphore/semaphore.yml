@@ -12,4 +12,4 @@ blocks:
           commands:
             - checkout
             - 'xcodebuild clean build -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
-            - swift test -v
+            - 'xcodebuild clean test -workspace "HomeTask.xcworkspace" -scheme "HomeTaskTest" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
