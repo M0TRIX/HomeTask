@@ -2,7 +2,7 @@ version: v1.0
 name: Swift
 agent:
   machine:
-    os_image: macos-xcode9.2
+    os_image: macos-xcode9
     type: e1-standard-2
 blocks:
   - name: Tests
