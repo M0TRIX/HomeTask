@@ -19,7 +19,6 @@ blocks:
         - name: Test
           commands:
             - bundle exec xcversion select 12.2
-            - bundle exec fastlane test
   - name: Build app
     task:
       env_vars:
