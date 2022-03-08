@@ -34,7 +34,6 @@ blocks:
           - ssh-add ~/.ssh/match-repository-private-key
           - checkout
           - cache restore
-          - gem install bundler -v '2.1.4'
           - bundle install --path vendor/bundle
           - cache store
       jobs:
@@ -52,7 +51,6 @@ blocks:
         commands:
           - checkout
           - cache restore
-          - gem install bundler -v '2.1.4'
           - bundle install --path vendor/bundle
           - cache store
       jobs:
