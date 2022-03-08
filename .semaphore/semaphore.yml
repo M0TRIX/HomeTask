@@ -33,7 +33,6 @@ blocks:
           - ssh-add ~/.ssh/match-repository-private-key
           - checkout
           - cache restore
-          - bundle install --path vendor/bundle
           - cache store
       jobs:
         - name: Build
