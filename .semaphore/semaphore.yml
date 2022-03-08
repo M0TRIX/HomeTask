@@ -37,8 +37,6 @@ blocks:
         - name: Build
           commands:
             - bundle exec xcversion select 12.2
-            - bundle exec fastlane build
-            - artifact push job build/TallestTowers.ipa
   - name: Take screenshots
     task:
       env_vars:
