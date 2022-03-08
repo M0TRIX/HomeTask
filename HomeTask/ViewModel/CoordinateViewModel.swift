@@ -35,6 +35,7 @@ class CoordinateViewModel{
         self.context = context
     }
     
+    init() {}
 
     func addCustomAnnotation(coordinatesViewModel:[CoordinateViewModel],completion:@escaping([CustomAnnotation])->()) {
         var customAnnotation = [CustomAnnotation]()
