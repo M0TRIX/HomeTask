@@ -18,7 +18,7 @@ home task for tier App
 
 5. choose debug->location->none
 
-<img src="https://github.com/M0TRIX/HomeTask/blob/master/screenShot.png>
+<img src="https://github.com/M0TRIX/HomeTask/blob/master/screenShot.png">
 
 you can check unit test from HomeTaskTest folder
 
