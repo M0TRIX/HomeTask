@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB94DF9558FF0B61316F9836 /* Pods_HomeTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B7B697AD69DF253294E84C /* Pods_HomeTask.framework */; };
 		D998239B27D768AC005183C5 /* CheckResponseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998239A27D768AC005183C5 /* CheckResponseTestCase.swift */; };
 		D998239D27D77428005183C5 /* CoordinateViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D998239C27D77428005183C5 /* CoordinateViewModelTestCase.swift */; };
 		D9996F7327D67CA200C1D84E /* MessageUtill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9996F7227D67CA200C1D84E /* MessageUtill.swift */; };
@@ -84,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB94DF9558FF0B61316F9836 /* Pods_HomeTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
