@@ -1,22 +1,23 @@
 <img src="https://img.shields.io/github/issues/M0TRIX/HomeTask"> <img src="https://img.shields.io/github/forks/M0TRIX/HomeTask"> <img src="https://img.shields.io/github/stars/M0TRIX/HomeTask"> <img src="https://img.shields.io/github/license/M0TRIX/HomeTask">
 
 # HomeTask
-home task for tier App
+home task for Tier App
 
 > using swift 4.0
 > xcode 9.2
 > MVVM
 
-1.clone the project
+- clone the repo
+``` git clone https://github.com/M0TRIX/HomeTask.git ```
 
-2. ``` pod install ```
+- ``` pod install ```
 
-3.run the project
+- run the project
 > wait until map appears
 
-4. choose debug->location->Apple
+- choose debug->location->Apple
 
-5. choose debug->location->none
+- choose debug->location->none
 
 <img src="https://github.com/M0TRIX/HomeTask/blob/master/shot.png">
 
@@ -26,8 +27,16 @@ for running test on your terminal use command below
 
 ``` xcodebuild clean build test -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO ```
 
-make sure you are in project directory
+make sure you are in the project directory
 
+# Feature
+
+- showing nearest scooter's distance
+- drawing polyline to nearest scooter
+
+# Contact
+
+Ali Asadi  asadi.0241@gmail.com
 
 # Licence
 
