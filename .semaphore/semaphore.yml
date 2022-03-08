@@ -2,8 +2,8 @@ version: v1.0
 name: Swift
 agent:
   machine:
-    type: e1-standard-4
-    os_image: macos-xcode12
+    type: a1-standard-4
+    os_image: macos-xcode13
 blocks:
   - name: Tests
     task:
@@ -12,4 +12,4 @@ blocks:
           commands:
             - checkout
             - 'xcodebuild clean build -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
-            - 'xcodebuild clean build test -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
+            - 'xcodebuild test -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
