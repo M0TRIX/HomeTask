@@ -1,25 +1,14 @@
 version: v1.0
-name: TomeTask
+name: Swift
 agent:
   machine:
     type: a1-standard-4
     os_image: macos-xcode12
 blocks:
-  - name: Take screenshots
+  - name: Tests
     task:
-      env_vars:
-        - name: LANG
-          value: en_US.UTF-8
-      prologue:
-        commands:
-          - checkout
-          - cache restore
-          - bundle install --path vendor/bundle
-          - cache store
       jobs:
-        - name: Screenshots
+        - name: swift test
           commands:
-            - bundle exec xcversion select 12.2
-            - xcrun simctl list
-            - bundle exec fastlane screenshots
-            - artifact push job screenshots
+            - checkout
+            - 'xcodebuild clean build -workspace "HomeTask.xcworkspace" -scheme "HomeTask" -destination "platform=iOS Simulator,name=iPhone 12 Pro,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO'
