@@ -21,6 +21,15 @@ class HomeTaskViewController: BaseViewController{
     
     var myLocation=CLLocation()
     
+     init(viewModel:CoordinateViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = CoordinateViewModel(context: self)
@@ -77,6 +86,8 @@ class HomeTaskViewController: BaseViewController{
     
     @objc func directionsAction(){
         viewModel.drawpolyLine(oregin:myLocation,closest:viewModel.closestVehcile!, completion: ({rect,route in
+            
+             self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
             self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
         }))
