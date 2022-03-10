@@ -72,7 +72,7 @@ class CoordinateViewModel{
             (response, error) -> Void in
             guard let response = response else {
                 if let error = error {
-                    print("Error: \(error)")
+                    MessageUtill.makeMessage(title: "loading failed", body: "\(error)", controller: self.context ?? BaseViewController())
                 }
                 return
             }

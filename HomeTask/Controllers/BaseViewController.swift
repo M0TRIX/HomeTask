@@ -12,7 +12,6 @@ import MapKit
 class BaseViewController: UIViewController {
     
     var locationManager: CLLocationManager!
-    var reuseIdentifier = ""
     var reachability = Reachability()!
     var IsConnected:Bool?
     

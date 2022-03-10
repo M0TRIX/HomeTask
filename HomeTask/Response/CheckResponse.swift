@@ -17,14 +17,14 @@ class ServiceValidator{
             return ServiceError.INVALIDRESPONSE
         }
         
-        switch  (response as? HTTPURLResponse)!.statusCode {
-        case 200:
+        switch  (response as? HTTPURLResponse)?.statusCode {
+        case 200?:
             return ServiceError.SUCCESS
-        case 400:
+        case 400?:
             return ServiceError.BADREQUEST
-        case 401:
+        case 401?:
             return ServiceError.UNAUTHORIZE
-        case 402,403:
+        case 402?,403?:
             return ServiceError.FORBIDDEN
         default:
             return ServiceError.SERVERERROR
